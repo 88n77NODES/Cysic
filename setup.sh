@@ -51,15 +51,8 @@ done
 mnemonic_folder="$HOME/.cysic/keys"
 if [ -d "$mnemonic_folder" ]; then
     echo -e "${GREEN}Ваші мнемонічні файли знаходяться у папці: ${mnemonic_folder}${RESET}"
-    echo -e "${YELLOW}Зміст файлів мнемоніки:${RESET}"
     
-    for file in "$mnemonic_folder"/*; do
-        echo -e "${GREEN}Файл: ${file}${RESET}"
-        cat "$file"
-        echo -e "${YELLOW}-----------------------------${RESET}"
-    done
-    
-    echo -e "${YELLOW}Будь ласка, збережіть ці файли, інакше ви не зможете повторно запустити програму.${RESET}"
+    echo -e "${YELLOW}Будь ласка, збережіть ці файли.${RESET}"
 else
     echo -e "${RED}Файли мнемоніки не знайдено! Перевірте роботу програми.${RESET}"
 fi
